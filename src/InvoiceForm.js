@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { TextField, Button, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Box, Typography, IconButton } from '@mui/material';
+import { TextField, Button, Grid, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Box, IconButton } from '@mui/material';
 import DeleteIcon from '@mui/icons-material/Delete';
 
 function InvoiceForm() {
