@@ -33,17 +33,13 @@ jobs:
       
       - name: Build Project
         run: npm run build
-      
-      - name: Install OIDC Client from Core Package
-        run: npm install @actions/core@1.6.0 @actions/http-client
         
       - name: Get Id Token
         uses: actions/github-script@v6
         id: idtoken
         with:
            script: |
-               const core = require('@actions/core');
-               return await core.getIDToken();
+               return await github.getIDToken();
            result-encoding: string
 
       - name: Build And Deploy
