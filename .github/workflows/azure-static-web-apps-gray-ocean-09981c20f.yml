@@ -35,13 +35,8 @@ jobs:
         run: npm run build
         
       - name: Get Id Token
-        uses: actions/github-script@v6
         id: idtoken
-        with:
-           script: |
-               const coredemo = require('@actions/core')
-               return await coredemo.getIDToken()
-           result-encoding: string
+        uses: actions/oidc-token@v1
 
       - name: Build And Deploy
         id: builddeploy
