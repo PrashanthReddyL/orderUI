@@ -40,7 +40,7 @@ function InvoiceForm() {
 
   const handleSubmit = async () => {
     try {
-      const response = await fetch('http://localhost:8080/api/orders', {
+      const response = await fetch('https://ordersvc-d2cbdhg5aecpf9cx.eastus-01.azurewebsites.net/api/orders', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
